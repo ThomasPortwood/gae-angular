@@ -1,13 +1,13 @@
 {
-  "name": "my-app",
+  "name": "gae-angular",
   "version": "0.0.0",
   "scripts": {
-    "ng": "../my-app/node_modules/.bin/ng",
-    "start": "../my-app/node_modules/.bin/ng serve",
-    "build": "../my-app/node_modules/.bin/ng build",
-    "test": "../my-app/node_modules/.bin/ng test",
-    "lint": "../my-app/node_modules/.bin/ng lint",
-    "e2e": "../my-app/node_modules/.bin/ng ../gae-angular/e2e"
+    "ng": "../gae-angular/node_modules/.bin/ng",
+    "start": "../gae-angular/node_modules/.bin/ng serve",
+    "build": "../gae-angular/node_modules/.bin/ng build",
+    "test": "../gae-angular/node_modules/.bin/ng test",
+    "lint": "../gae-angular/node_modules/.bin/ng lint",
+    "e2e": "../gae-angular/node_modules/.bin/ng ../gae-angular/e2e"
   },
   "private": true,
   "dependencies": {
