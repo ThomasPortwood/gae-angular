@@ -1,4 +1,4 @@
-name: Docker
+name: Deploy
 
 on:
   push:
@@ -12,14 +12,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Publish app to Google App Engine
+      - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@v2.3
         with:
-          # The service account email which will be used for authentication.
           service_account_email: secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL
-          # The service account key which will be used for authentication.
           service_account_key: secrets.GOOGLE_SERVICE_ACCOUNT_KEY
-          # GAE project id
           project_id: secrets.GOOGLE_PROJECT_ID
-          # GAE variables to be written to the app.yaml file
-          gae_variables: # optional
+          gae_config_path: ./app.yaml
+
+#      - name: Publish app to Google App Engine
+#        run: |
+#          gcloud auth activate-service-account ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }} --key-file=client-secret.json
+#          gcloud config set project ${{ secrets.GOOGLE_PROJECT_ID }}
+#          gcloud -q app deploy app.yaml --promote
