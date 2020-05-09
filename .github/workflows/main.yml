@@ -16,9 +16,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Install node packages and build angular app
         uses: actions/angular-github-actions
-        run:
-          npm i
-          ng build
       - name: Deploy to Google App Engine
         uses: atRobertoFlores/gae_deploy_action@master
         with:
