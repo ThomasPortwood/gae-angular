@@ -12,6 +12,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: testing
+        run:
+          pwd
       - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@v2.3
         with:
