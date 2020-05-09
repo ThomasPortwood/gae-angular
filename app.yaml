@@ -2,7 +2,7 @@ runtime: nodejs10
 service: angular-sandbox
 handlers:
 - url: /
-  static_files: dist/index.html
-  upload: dist/index.html
+  static_files: dist/gae-angular/index.html
+  upload: dist/gae-angular/index.html
 - url: /
-  static_dir: dist
+  static_dir: dist/gae-angular
