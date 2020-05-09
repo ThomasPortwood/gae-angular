@@ -15,6 +15,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Angular Full CI
         uses: colbyhill21/angular-full-ci/@v1.0
+        with:
+          testcommand: run test:ci
+          mocha: true
       - name: Deploy to Google App Engine
         uses: atRobertoFlores/gae_deploy_action@master
         with:

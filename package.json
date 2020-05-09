@@ -6,6 +6,7 @@
     "start": "../gae-angular/node_modules/.bin/ng serve",
     "build": "../gae-angular/node_modules/.bin/ng build",
     "test": "../gae-angular/node_modules/.bin/ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "lint": "../gae-angular/node_modules/.bin/ng lint",
     "e2e": "../gae-angular/node_modules/.bin/ng ../gae-angular/e2e"
   },
