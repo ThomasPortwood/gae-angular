@@ -1,4 +1,13 @@
 provider "google" {
-  credentials = file("/Users/thomasportwood/Downloads/Sandbox-85e9709a6284.json")
+  credentials = var.google_credentials
   region = "us-west2"
+}
+
+terraform {
+  backend "remote" {
+    organization = "SomeSoftwareTeam"
+    workspaces {
+      name = "gae-angular"
+    }
+  }
 }
