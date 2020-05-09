@@ -23,6 +23,6 @@ jobs:
           gae_config_path: ./app.yaml
       - name: Publish app to Google App Engine
         run: |
-#          gcloud auth activate-service-account ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }} --key-file=client-secret.json
+          # gcloud auth activate-service-account ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }} --key-file=client-secret.json
           gcloud config set project ${{ secrets.GOOGLE_PROJECT_ID }}
           gcloud -q app deploy app.yaml --promote
