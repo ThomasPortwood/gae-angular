@@ -12,10 +12,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: testing
-        run:
-          pwd
-      - name: testingmore
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: test
         run:
           ls -al
       - name: Initialize Google Cloud SDK
