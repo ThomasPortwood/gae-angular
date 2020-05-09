@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish app to Google App Engine
-      - uses: zxyle/publish-gae-action@v2.3
+        uses: zxyle/publish-gae-action@v2.3
         with:
           # The service account email which will be used for authentication.
           service_account_email: secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL
